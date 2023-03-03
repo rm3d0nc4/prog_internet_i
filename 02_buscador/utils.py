@@ -19,8 +19,10 @@ def fetchTextPage(link):
 def generateFullLink(baseUrl: str, childUrl: str):
     if(childUrl[0] == '/'):
         return baseUrl + childUrl[1:];
-    elif(childUrl) == "#":
+    elif(childUrl == "#"):
         return baseUrl
+    elif (childUrl.startswith('www')):
+        return 'https://' + childUrl
     else:
         return childUrl
     

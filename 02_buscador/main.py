@@ -4,7 +4,7 @@ from counter import Counter
 from search_engine import searchEngine
 
 def search(keyword, url, depth):
-    requests_cache.install_cache('my_cache', expire_after= 40) 
+    requests_cache.install_cache('my_cache') 
     visitedLinks = []
     circularPagesCounter = Counter()
     referenceCounter = Counter()
