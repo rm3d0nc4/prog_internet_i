@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang = "pt-BR">
+<head>
+<meta charset="utf-8"/>
+<title>Minha página</title>
+<style>
+    body {
+
+        padding: 20px;
+        background-color: aquamarine;
+        text-align: center;
+    }
+    .linear-gradient {
+        display: inline-block;
+        margin: 10px;
+        width: 600px;
+        height: 120px;
+        background-color: #F0F0F0;
+    }
+    #g1 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(red, orange, yellow, green, blue, purple);
+    }
+    #g2 {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(red, orange, yellow, green, blue, purple);
+    }
+    #g3 {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(red, orange, yellow, green, blue, purple);
+    }
+</style>
+</head>
+<body>
+    <header><h1>Gradiente aplicado a um arco-íris</h1></header>
+    <div class="linear-gradient">
+        <div id="g1"></div>
+        <legend>Gradiente 1 - linear</legend>
+    </div>
+    <div class="linear-gradient">
+        <div id="g2"></div>
+        <legend>Gradiente 2 - radial</legend>
+    </div>
+    <div class="linear-gradient">
+        <div id="g3"></div>
+        <legend>Gradiente 3 - cônico</legend>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang = "pt-BR">
+<head>
+<meta charset="utf-8"/>
+<title>Minha página</title>
+<style>
+    body {
+        padding: 20px;
+        background-color: aquamarine;
+    }
+    .linear-gradient {
+        display: inline-block;
+        margin: 10px;
+        width: 120px;
+        height: 120px;
+        background-color: #F0F0F0;
+        text-align: center;
+    }
+    #g1 {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(red 0deg 120deg, green 120deg 240deg, blue 240deg 360deg);
+    }
+    #g2 {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(pink 0deg 90deg, orange 270deg 360deg);
+    }
+    #g3 {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient( at 30%,red, blue);
+    }
+    #g4 {
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(red 12deg, green 12deg 24deg, blue 24deg 46deg, orange 46deg 58deg, pink 60deg 72deg, brown 72deg 84deg, black 84deg 92deg, yellow 110deg)
+    }
+</style>
+</head>
+<body>
+    <header> <h1>Gradiente de cone</h1> </header>
+    <p>Gradiente radial (conic-gradient()) é uma função CSS que cria uma imagem gradiente onde a transição de cores é feita de forma rotacionada em volta de um ponto central</p>
+    <br>
+    <div class="linear-gradient">
+        <div id="g1"></div>
+        <legend>Gradiente 1</legend>
+    </div>
+    <div class="linear-gradient">
+        <div id="g2"></div>
+        <legend>Gradiente 2</legend>
+    </div>
+    <div class="linear-gradient">
+        <div id="g3"></div>
+        <legend>Gradiente 3</legend>
+    </div>
+    <div class="linear-gradient">
+        <div id="g4"></div>
+        <legend>Gradiente 4</legend>
+    </div>
+
+    <ul>
+        <li>Gradiente 1: Com ponto central padrão,  formado por 3 cores, com marcação de início e fim, portanto, sem transição aparente</li>
+        <li>Gradiente 2: Gradiente com ponto central padrão, com transição aparente após o ângulo 90˚ até o ângulo 270˚</li>
+        <li>Gradiente 3: Com ponto central definido a 30% da largura e altura do componente, onde as cores são distribuídas uniformemente</li>
+        <li>Gradiente 4: Com várias cores definidas, onde há transição apenas entre a penúltima e última cor</li>
+    </ul>
+</body>
+</html>
