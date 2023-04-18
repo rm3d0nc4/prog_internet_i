@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<script>
+    function alinhar(id, direcao) {
+        let elemento = document.getElementById(id)
+        elemento.style.textAlign = direcao
+    }
+
+    function colorir(tag, color) {
+        let elementos = document.getElementsByTagName(tag)
+
+        for (const elemento of elementos) {
+            elemento.style.color = color
+        }
+    }
+</script>
+<html>
+    <head>
+        <h1 style="text-align:center;">Exercício 02</h1>
+        <hr>
+    </head>
+    <body>
+        <h2>Letra a</h2>
+        <br>
+        <p id="para1" style="text-align: center;">Texto-exemplo da letra A</p>
+
+        <select style="align-items: center; display: flex;" name="Seletor" id="selector" onchange="alinhar('para1', this.options[this.selectedIndex].value)">
+            <option value="center">Centralizado</option>
+            <option value="left">À esquerda</option>
+            <option value="right">À direita</option>
+        </select>
+        <br>
+        <h2>Letra b</h2>
+        <br>
+        <p style="text-align: center;">Texto-exemplo da letra B</p>
+        <p style="text-align: center;">Texto-exemplo da letra B</p>
+
+        <button onclick="colorir('p', 'red')">Colorir</button>
+    </body>
+</html>

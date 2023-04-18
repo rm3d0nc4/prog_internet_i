@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Testes DOM</title>
+    <script type="application/javascript">
+    function setBodyAttr(attr, value){
+      if (document.body) eval('document.body.'+attr+'="'+value+'"');
+      else notSupported();
+    }
+    </script>
+  </head>
+  <body>
+    <div style="margin: .5in; height: 400;">
+      <p><b><tt>text</tt></b></p>
+      <form>
+        <select onChange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);">
+          <option value="black">preto
+          <option value="darkblue">azul escuro
+        </select>
+        <p><b><tt>bgColor</tt></b></p>
+        <select onChange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);">
+          <option value="white">branco
+          <option value="lightgrey">cinza
+        </select>
+        <p><b><tt>link</tt></b></p>
+        <select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);">
+          <option value="blue">azul
+          <option value="green">verde
+        </select>  <small>
+        <a href="http://algum.website.tld/pagina.html" id="amostra">
+        (link)</a></small><br>
+      </form>
+      <form>
+        <input type="button" value="version" onclick="ver()" />
+      </form>
+    </div>
+  </body>
+</html>

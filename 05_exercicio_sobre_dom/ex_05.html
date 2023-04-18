@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<script>
+    function colorir(tag, color) {
+        let elementos = document.getElementsByTagName(tag)
+
+        for (const elemento of elementos) {
+            elemento.style.color = color
+        }
+    }
+</script>
+<html>
+    <head>
+        <h1 style="text-align:center;">Exercício 05</h1>
+        <hr>
+    </head>
+    <body>
+        <h2>Colorir Texto</h2>
+        <br>
+        <p style="text-align: center;">Um texto qualquer 1</p>
+        <p style="text-align: center;">Um texto qualquer 2</p>
+
+        <button onclick="colorir('p', 'green')">Colorir</button>
+    </body>
+</html>

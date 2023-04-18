@@ -1,0 +1,21 @@
+4) Qual a diferença entre as propriedades textContent e innerHTML dos elementos
+HTML? Cite exemplos.
+
+Em suma, a propriedade textContent retorna exclusivamente o todo texto que fica dentro de uma tag (<tag/>texto<tag>). Já o innerHTML retorna todos os componentes filhos do componente que foi acessado (incluíndo textos)
+
+Exemplo: supondo que temos o seguinte compoente:
+    <div id="div1">
+        <p>Hoje o dia está nublado,</p>
+        <div>
+            <p> entretanto não há previsão de chuva!</p>
+        </div>
+    </div>
+
+Ao fazer a busca de elemento por id no documento, passando o id da primeira div (div1), e acessar a propriedade textContent, será retornado o seguinte texto:
+    Hoje o dia está nublado,  entretanto não há previsão de chuva!
+
+Porém, se acessarmos a propriedade innerHTML, serão retornados todos os filhos do componente acessado:
+    <p>Hoje o dia está nublado,</p>
+        <div>
+            <p> entretanto não há previsão de chuva!</p>
+        </div>

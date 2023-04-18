@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<script>
+    function modoNormal() {
+        const elemento = document
+        elemento.body.style.backgroundColor = "white";
+        elemento.body.style.color = 'black';
+    }
+
+    function modoDark() {
+        const elemento = document
+        elemento.body.style.backgroundColor = "black";
+        elemento.body.style.color = 'white'
+    }
+</script>
+<html>
+    <head>
+        <h1 style="text-align:center;">Exercício 05</h1>
+        <hr>
+    </head>
+    <body>
+        <h2>Colorir Texto</h2>
+        <br>
+        <p style="text-align: center;">Um texto qualquer 1</p>
+        <p style="text-align: center;">Um texto qualquer 2</p>
+
+        <button onclick="modoDark()">Modo Dark</button>
+        <button onclick="modoNormal()">Modo Normal</button>
+    </body>
+</html>
