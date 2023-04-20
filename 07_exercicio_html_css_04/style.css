@@ -1,0 +1,32 @@
+body {
+    background: black;
+    color: lightgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("./assets/fundo_neo.jpg");
+    background-position: right;
+    background-repeat: repeat-Y;
+}
+
+p {
+    text-align: justify;
+    width: 88%;
+    line-height: 1.2;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+header, footer {
+    background-image: url("./assets/fundo_matrix.jpg");
+    width: 88%;
+}
+
+header h1 {
+    text-align: left;
+}
+footer h1 {
+    text-align: right;
+}
