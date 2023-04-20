@@ -1,0 +1,67 @@
+
+
+.motivacional {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+}
+
+.by {
+    text-align: right;
+    font-style: italic;
+    color: darkslategray;
+}
+
+.date {
+    color: darkslategray;
+    font-style: italic;
+}
+
+.identation {
+    margin-left: 4rem;
+}
+
+#riscado {
+    position: relative;
+}
+#riscado::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 3px solid;
+    /* border-color: inherit; */
+  
+    /* -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg); */
+    transform:rotate(-5deg);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: linear-gradient(to left, #b3cce2,#D9CCC1);
+}
+
+h1, h2 {
+    letter-spacing: .5rem;
+    background-color: #005eb0;
+    color: #D9CCC1;
+}
+
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #024059;
+}
