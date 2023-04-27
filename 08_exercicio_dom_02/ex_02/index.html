@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            h2 {
+                display: inline;
+            }
+
+            input, select, option, #equal {
+                margin: 10px;
+                width: 20%;
+                height: 50%;
+                font-size: 30px;
+            }
+
+            input {
+                width: 40%;
+
+            }
+            button {
+                font-size: 30px;
+            }
+
+            #panel {
+                display: flex;
+                justify-content: space-evenly
+            }
+            #result {
+                margin: 10px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h2>Calculadora</h2>
+        </header>
+        <div>
+            <div id="panel">
+                <input type="num" id="num1"></input>
+                <select name="Operação" id="op">
+                    <option>+</option>
+                    <option>-</option>
+                    <option>*</option>
+                    <option>/</option>
+                </select>
+                <input type="num" id="num2"></input>
+                <h2 id="equal">=</h2>
+                <h2 id="result"></h2>
+            </div>
+            <button id="button">Calcular</button>
+        </div>
+        <script src="./script.js"></script>
+
+    </body>
+</html>

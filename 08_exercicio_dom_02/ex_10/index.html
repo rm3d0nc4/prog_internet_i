@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Selects</h2>
+	<select id="direita" multiple>
+		<option value="a">Abacate</option>
+		<option value="b">Banana</option>
+		<option value="c">Carambola</option>
+		<option value="d">Damasco</option>
+	</select>
+	<select id="esquerda" multiple></select>
+	<br>
+	<button onclick="enviar('direita', 'esquerda')">Mover para direita</button>
+	<button onclick="enviar('esquerda', 'direita')">Mover para esquerda</button>
+</body>
+</html>

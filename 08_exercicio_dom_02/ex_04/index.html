@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            h2 {
+                display: inline;
+            }
+
+            select {
+                margin: 10px;
+                width: 40%;
+                height: 50%;
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 12px;
+            }
+            #result {
+                text-align: center;
+                /* display: flex; */
+                background-color: red;
+                width: 50%;
+                height: 50%;
+                /* margin: 10px; */
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h2>Carregar Imagem</h2>
+        </header>
+        <div>
+            <select name="Images" id="select">
+                <option disabled selected value>Selecione uma opção</option>
+                <option value="../ex_03/assets/imagem.png">Imagem 1</option>
+                <option value="../ex_03/assets/imagem2.png">Imagem 2</option>
+                <option value="../ex_03/assets/imagem3.png">Imagem 3</option>
+            </select>
+            <div id="result">
+                <h3>Result</h3>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+
+    </body>
+</html>

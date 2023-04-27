@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            h2 {
+                display: block;
+            }
+
+            .checkbox-div {
+                margin: 10px;
+            }
+
+            #checkbox {
+                text-align: center;
+                margin: 20px;
+                padding: 20px;
+                background-color: rgb(185, 222, 255);
+                display: inline-block;
+                border: 2px black solid;
+                border-radius: 20px;
+                
+            }
+
+            button {
+                font-size: 12px;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h2>PALAVRAS e palavras</h2>
+        </header>
+        <div id="checkbox">
+            <p>Converter palavras:</p>
+            <input type="text" id="input">
+            <select name="opcoes" id="select">
+                <option disabled selected value>Opção</option>
+                <option value="M">Maiúscula</option>
+                <option value="m">Minúscula</option>
+            </select>
+            <button id="button">Validar</button>
+            <h2 id="output"></h2>
+        </div>
+        <script src="./script.js"></script>
+
+    </body>
+</html>
