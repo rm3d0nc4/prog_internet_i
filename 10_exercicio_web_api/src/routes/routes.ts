@@ -3,12 +3,14 @@ import { PostImpl } from '../core/entities/post_impl';
 import Post from '../core/contracts/post';
 import BlogRepository from '../core/contracts/blog_repository';
 import blogRepositoryWithMicroblog from '../repositories/blog_repository_with_microblog';
+import blogRepositoryWithDatabase from '../repositories/blog_repository_with_database';
 
 
 export const postRoutes = Router();
 
 
-const repository: BlogRepository = blogRepositoryWithMicroblog; 
+// const repository: BlogRepository = blogRepositoryWithMicroblog; 
+const repository: BlogRepository = blogRepositoryWithDatabase; 
 
 postRoutes.get('/posts', async (request: Request, response: Response, next: NextFunction) => {
     try {
