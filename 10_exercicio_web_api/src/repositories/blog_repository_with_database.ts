@@ -15,12 +15,8 @@ class BlogRepositoryWithDatabase implements BlogRepository, CommentableBLogRepos
     }
     
     async deletePost(id: string): Promise<void> {
-        const post = await SPost.findByPk(id);
-        if(post) {
-            await SPost.destroy({where: post.get()});
-        } else {
-            throw new AppError('Post Não Encontrado', 404)
-        }
+        const post = await this.retrievePost(id)
+        await SPost.destroy({where: {id: post.id}});
     }
 
     async retrievePost(id: string): Promise<Post> {
@@ -40,12 +36,8 @@ class BlogRepositoryWithDatabase implements BlogRepository, CommentableBLogRepos
     }
 
     async updatePost(post: Post): Promise<void> {
-        const currentPost = await SPost.findByPk(post.id);
-        if (currentPost) {
-            await SPost.update({id: post.id, text: post.text, likes: post.likes}, {where: currentPost.get()});
-        } else {
-            throw new AppError('Post Não Encontrado', 404);
-        }
+        const oldPost = await this.retrievePost(post.id)
+        await SPost.update({text: post.text, likes: post.likes}, {where: {id: oldPost.id}});
     }
     
     async createComment(postId: string, comment: Comment): Promise<void> {
