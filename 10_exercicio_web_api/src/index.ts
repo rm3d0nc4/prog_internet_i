@@ -1,13 +1,14 @@
-import express, { Application, NextFunction, Request, Response } from "express";
-import { postRoutes } from "./routes/routes";
+import express, { Application} from "express";
 import errorMiddleware from "./core/middlewares/error_middleware";
-import AppError from "./core/errors/app_error";
+import { postRoutes } from "./routes/post_routes";
+import { commentRoutes } from "./routes/comment_routes";
 
 const app: Application = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use(postRoutes);
+app.use(commentRoutes);
 
 app.use(errorMiddleware);
 

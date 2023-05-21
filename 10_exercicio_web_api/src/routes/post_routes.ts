@@ -6,7 +6,7 @@ import blogRepositoryWithMicroblog from '../repositories/blog_repository_with_mi
 import blogRepositoryWithDatabase from '../repositories/blog_repository_with_database';
 
 
-export const postRoutes = Router();
+export const postRoutes: Router = Router();
 
 
 // const repository: BlogRepository = blogRepositoryWithMicroblog; 
@@ -21,20 +21,20 @@ postRoutes.get('/posts', async (request: Request, response: Response, next: Next
     }
 
 })
-postRoutes.get('/posts/:id', async (request: Request, response: Response, next: NextFunction) => {
+postRoutes.get('/posts/:postId', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const {id} = request.params;
-        const post = await repository.retrievePost(id as string)
+        const {postId} = request.params;
+        const post = await repository.retrievePost(postId as string)
         return response.status(200).json(post)
     } catch (error) {
         next(error)
     }
     
 })
-postRoutes.delete('/posts/:id', async (request: Request, response: Response, next: NextFunction) => {
+postRoutes.delete('/posts/:postId', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const {id} = request.params;
-        await repository.deletePost(id as string);
+        const {postId} = request.params;
+        await repository.deletePost(postId as string);
         return response.status(204).send();
     } catch (error) {
         next(error)
@@ -54,10 +54,10 @@ postRoutes.post('/posts', async (request: Request, response: Response, next: Nex
 
 })
 
-postRoutes.put('/posts/:id', async (request: Request, response: Response, next: NextFunction) => {
+postRoutes.put('/posts/:postId', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const {id} = request.params;
-        const post: Post = await repository.retrievePost(id as string);
+        const {postId} = request.params;
+        const post: Post = await repository.retrievePost(postId as string);
         const {text, likes} = request.body;
 
         post.text = text ?? post.text;
@@ -71,10 +71,10 @@ postRoutes.put('/posts/:id', async (request: Request, response: Response, next: 
     }
 
 })
-postRoutes.patch('/posts/:id', async (request: Request, response: Response, next: NextFunction) => {
+postRoutes.patch('/posts/:postId', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const {id} = request.params;
-        const post: Post = await repository.retrievePost(id as string);
+        const {postId} = request.params;
+        const post: Post = await repository.retrievePost(postId as string);
         const {text, likes} = request.body;
 
         post.text = text ?? post.text;
@@ -88,10 +88,10 @@ postRoutes.patch('/posts/:id', async (request: Request, response: Response, next
     }
 
 })
-postRoutes.patch('/posts/:id/like', async (request: Request, response: Response, next: NextFunction) => {
+postRoutes.patch('/posts/:postId/like', async (request: Request, response: Response, next: NextFunction) => {
     try {
-        const {id} = request.params;
-        const post: Post = await repository.retrievePost(id as string);
+        const {postId} = request.params;
+        const post: Post = await repository.retrievePost(postId as string);
         post.likes++;
         await repository.updatePost(post);
     
